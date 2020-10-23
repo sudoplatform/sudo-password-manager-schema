@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/SecureField",
+  "definitions": {
+    "SecureField": {
+      "title": "SecureField",
+      "type": "object",
+      "properties": {
+        "secureValue": {
+          "type": "string",
+          "title": "secureValue"
+        }
+      },
+      "required": ["secureValue"]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/Base",
+  "definitions": {
+    "Base": {
+      "title": "Base",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "name"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string",
+          "title": "createdAt"
+        },
+        "id": {
+          "type": "string",
+          "title": "id"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string",
+          "title": "updatedAt"
+        },
+        "notes": {
+          "$ref": "./secureField.json",
+          "title": "notes"
+        }
+      },
+      "required": ["name", "createdAt", "id", "type", "updatedAt"]
+    }
+  }
+}

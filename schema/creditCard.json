@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/CreditCard",
+  "definitions": {
+    "CreditCard": {
+      "title": "CreditCard",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./base.json"
+        },
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["creditCard"],
+              "title": "type"
+            },
+            "cardName": {
+              "type": "string",
+              "title": "cardName"
+            },
+            "cardNumber": {
+              "$ref": "./secureField.json",
+              "title": "cardNumber"
+            },
+            "cardType": {
+              "type": "string",
+              "title": "cardType"
+            },
+            "cardSecurityCode": {
+              "$ref": "./secureField.json",
+              "title": "cardSecurityCode"
+            },
+            "cardExpiration": {
+              "format": "date-time",
+              "type": "string",
+              "title": "cardExpiration"
+            }
+          },
+          "required": ["type"]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/BankAccount",
+  "definitions": {
+    "BankAccount": {
+      "title": "BankAccount",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./base.json"
+        },
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["bankAccount"],
+              "title": "type"
+            },
+            "bankName": {
+              "type": "string",
+              "title": "bankName"
+            },
+            "accountType": {
+              "type": "string",
+              "title": "accountType"
+            },
+            "routingNumber": {
+              "type": "string",
+              "title": "routingNumber"
+            },
+            "accountNumber": {
+              "$ref": "./secureField.json",
+              "title": "accountNumber"
+            },
+            "swiftCode": {
+              "type": "string",
+              "title": "swiftCode"
+            },
+            "ibanNumber": {
+              "type": "string",
+              "title": "ibanNumber"
+            },
+            "branchAddress": {
+              "type": "string",
+              "title": "branchAddress"
+            },
+            "branchPhone": {
+              "type": "string",
+              "title": "branchPhone"
+            },
+            "accountPin": {
+              "$ref": "./secureField.json",
+              "title": "accountPin"
+            }
+          },
+          "required": ["type"]
+        }
+      ]
+    }
+  }
+}

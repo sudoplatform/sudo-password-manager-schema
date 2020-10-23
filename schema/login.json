@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/Login",
+  "definitions": {
+    "Login": {
+      "title": "Login",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./base.json"
+        },
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["login"],
+              "title": "type"
+            },
+            "password": {
+              "$ref": "./passwordField.json",
+              "title": "password"
+            },
+            "url": {
+              "type": "string",
+              "title": "url"
+            },
+            "user": {
+              "type": "string",
+              "title": "user"
+            }
+          },
+          "required": ["type"]
+        }
+      ]
+    }
+  }
+}

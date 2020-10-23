@@ -1,0 +1,31 @@
+{
+  "name": "@sudoplatform/sudo-password-manager-schema",
+  "version": "1.0.0",
+  "author": "Anonyome Labs, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sudoplatform/sudo-password-manager-schema.git"
+  },
+  "license": "Apache-2.0",
+  "main": "./schema/schema.json",
+  "scripts": {
+    "lint": "yarn lint:prettier",
+    "lint:prettier": "prettier -l \"{bin,schema}/**/*.{js,json,jsx,ts,tsx}\"",
+    "build": "yarn build:verify && yarn build:gen",
+    "build:gen": "./bin/codegen.sh",
+    "build:verify": "yarn audit && yarn lint"
+  },
+  "resolutions": {
+    "quicktype/@mark.probst/typescript-json-schema/yargs/yargs-parser": "^19.0.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  },
+  "files": [
+    "schema"
+  ],
+  "dependencies": {
+    "quicktype": "^15.0.256"
+  }
+}

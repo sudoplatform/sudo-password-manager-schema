@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/PasswordManagerVault",
+  "definitions": {
+    "PasswordManagerVault": {
+      "title": "PasswordManagerVault",
+      "type": "object",
+      "properties": {
+        "login": {
+          "type": "array",
+          "items": {
+            "$ref": "./login.json"
+          },
+          "title": "login"
+        },
+        "generatedPassword": {
+          "type": "array",
+          "items": {
+            "$ref": "./generatedPassword.json"
+          },
+          "title": "generatedPassword"
+        },
+        "creditCard": {
+          "type": "array",
+          "items": {
+            "$ref": "./creditCard.json"
+          },
+          "title": "creditCard"
+        },
+        "bankAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "./bankAccount.json"
+          },
+          "title": "bankAccount"
+        },
+        "schemaVersion": {
+          "type": "number",
+          "title": "schemaVersion"
+        }
+      },
+      "required": [
+        "login",
+        "generatedPassword",
+        "creditCard",
+        "bankAccount",
+        "schemaVersion"
+      ]
+    }
+  }
+}
