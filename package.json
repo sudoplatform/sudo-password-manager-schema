@@ -17,7 +17,9 @@
   },
   "resolutions": {
     "quicktype/@mark.probst/typescript-json-schema/yargs/yargs-parser": "^19.0.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "lodash": "^4.17.21",
+    "y18n": "^3.2.2"
   },
   "devDependencies": {
     "prettier": "^2.0.5"
@@ -26,6 +28,6 @@
     "schema"
   ],
   "dependencies": {
-    "quicktype": "^15.0.256"
+    "quicktype": "^15.0.260"
   }
 }
